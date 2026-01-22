@@ -10,6 +10,8 @@ const port = process.env.PORT || 5001;
 
 connectDB();
 
+app.use(express.json()); 
+
 app.use("/api/jobs", applicationRoutes); 
 
 app.listen(port, () => {
